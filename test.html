@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Computer Essentials Quiz</title>
+
+<link rel="stylesheet" href="style.css" />
+
+<!-- EmailJS library -->
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  (function() {
+    emailjs.init("K050wx49i_RQzr5oT");
+  })();
+</script>
+<style>
+    body { font-family: Arial, sans-serif; padding: 20px; }
+    .app { max-width: 500px; margin: auto; }
+    .hidden { display: none; }
+    .btn { display: block; margin: 8px 0; padding: 10px; cursor: pointer; }
+    input[type="text"], input[type="email"] { width: 100%; padding: 8px; margin: 5px 0; }
+    #start-btn { margin-top: 10px; }
+</style>
+</head>
+<body> 
+<div class="app">
+
+    <!-- User Info Form -->
+    <div id="user-form">
+        <h1>Enter Your Details</h1>
+        <label>Name:</label>
+        <input type="text" id="user-name" placeholder="Your name" required>
+        <label>Email:</label>
+        <input type="email" id="user-email" placeholder="Your email" required>
+        <button id="start-btn" class="btn">Start Quiz</button>
+    </div>
+
+    <!-- Quiz Section -->
+    <div id="quiz-section" class="hidden">
+        <h1>Computer Essentials</h1>
+        <div class="quiz">
+            <h2 id="question">Question goes here</h2>
+            <div id="answers-buttons"></div>
+            <button id="next-btn" style="display:none;">Next</button>
+        </div>
+    </div>
+
+</div>
+
+<script>
+const questions = [
+  {
+    question: "What does ICT stand for?",
+    answers: [
+      { text: "Information and Communication Technology", correct: true },
+      { text: "An umbrella term that includes all technological devices", correct: false },
+      { text: "International and Communication Technology", correct: false },
+      { text: "Informal and Technology Communication", correct: false }
+    ]
+  },
+  {
+    question: "Which one of the following is created by folders and subfolders on a drive?",
+    answers: [
+      { text: "A subfolder", correct: false },
+      { text: "Hierarchical structure", correct: true },
+      { text: "Folders", correct: false },
+      { text: "A yellow icon", correct: false }
+    ]
+  },
+  {
+    question: "Which components have a major impact on the performance of a computer?",
+    answers: [
+      { text: "CPU, RAM, Hard drive", correct: true },
+      { text: "Processor, storage, CPC", correct: false },
+      { text: "Memory, CPU, Hard dive", correct: false },
+      { text: "Hard drive, Memory, ICT", correct: false }
+    ]
+  },
+  {
+    question: "What is the primary function of the CPU?",
+    answers: [
+      { text: "Storage", correct: false },
+      { text: "Processing data", correct: true },
+      { text: "Rendering graphics", correct: false },
+      { text: "Connecting peripherals", correct: false }
+    ]
+  },
+  {
+    question: "Which device is used to input data?",
+    answers: [
+      { text: "Monitor", correct: false },
+      { text: "Keyboard", correct: true },
+      { text: "Printer", correct: false },
+      { text: "Speaker", correct: false }
+    ]
+  },
+  {
+    question: "Which one of the following can you set at the operating system level?",
+    answers: [
+      { text: "Default printer", correct: true },
+      { text: "Images", correct: false },
+      { text: "Drivers", correct: false },
+      { text: "Applications", correct: false }
+    ]
+  },
+  {
+    question: "What is the purpose of an operating system?",
+    answers: [
+      { text: "To manage hardware and software resources", correct: true },
+      { text: "To provide internet access", correct: false },
+      { text: "To create documents", correct: false },
+      { text: "To play games", correct: false }
+    ]
+  },
+  {
+    question: "Which one of the following is a reason to use a USB interface?",
+    answers: [
+      { text: "To connect an external hard disk", correct: true },
+      { text: "To connect a printer", correct: false },
+      { text: "To connect a monitor", correct: false },
+      { text: "To connect via HDMI", correct: false }
+    ]
+  },
+  {
+    question: "Which one of the following best describes an End User License Agreement (EULA)?",
+    answers: [
+      { text: "It defines how certain software may be used", correct: true },
+      { text: "It means the software is free to use", correct: false },
+      { text: "It means you do not own the software", correct: false },
+      { text: "It allows you to connect via HDMI", correct: false }
+    ]
+  },
+  {
+    question: "Which of the following is an example of an output device?",
+    answers: [
+      { text: "Monitor", correct: true },
+      { text: "Keyboard", correct: false },
+      { text: "Mouse", correct: false },
+      { text: "Microphone", correct: false }
+    ]
+  },
+  {
+    question: "Which of the following is an example of an input device?",
+    answers: [
+      { text: "Keyboard", correct: true },
+      { text: "Printer", correct: false },
+      { text: "Speaker", correct: false },
+      { text: "Projector", correct: false }
+    ]
+  },
+  {
+    question: "Which of the following is an example of an ICT service?",
+    answers: [
+      { text: "Email service", correct: true },
+      { text: "Laptop", correct: false },
+      { text: "Printer", correct: false },
+      { text: "Scanner", correct: false }
+    ]
+  },
+  {
+    question: "Which of the following is NOT a type of computer?",
+    answers: [
+      { text: "Supercomputer", correct: false },
+      { text: "Mainframe", correct: false },
+      { text: "Laptop", correct: false },
+      { text: "Television", correct: true }
+    ]
+  },
+  {
+    question: "**ONE WORD ANSWER**: What is the term for a device that displays output?",
+    input: true,
+    correctAnswers: ["Monitor", "monitor"]
+  },
+  {
+    question: "**ONE WORD ANSWER**: What is the term for a device that manipulates what is inside a computer?",
+    input: true,
+    correctAnswers: ["Input device", "input", "device"]
+  }
+];
+
+const questionElement = document.getElementById('question');
+const answersContainer = document.getElementById('answers-buttons');
+const nextButton = document.getElementById('next-btn');
+
+let currentQuestionIndex = 0;
+let score = 0;
+let answered = false;
+let userName = "";
+let userEmail = "";
+
+// Start button event
+document.getElementById('start-btn').addEventListener('click', () => {
+    const nameInput = document.getElementById('user-name').value.trim();
+    const emailInput = document.getElementById('user-email').value.trim();
+
+    if (!nameInput || !emailInput) {
+        alert("Please enter your name and email before starting.");
+        return;
+    }
+
+    userName = nameInput;
+    userEmail = emailInput;
+
+    document.getElementById('user-form').classList.add('hidden');
+    document.getElementById('quiz-section').classList.remove('hidden');
+    startQuiz();
+});
+
+function startQuiz() {
+    currentQuestionIndex = 0;
+    score = 0;
+    showQuestion();
+}
+
+function showQuestion() {
+    resetState();
+    answered = false;
+    const currentQuestion = questions[currentQuestionIndex];
+    questionElement.textContent = `${currentQuestionIndex + 1}. ${currentQuestion.question}`;
+
+    if (currentQuestion.input) {
+        // Create input box for user answer
+        const input = document.createElement('input');
+        input.type = 'text';
+        input.id = 'answer-input';
+        input.placeholder = 'Type your answer here';
+
+        // Add event listener for pressing Enter
+        input.addEventListener('keydown', (e) => {
+            if (e.key === 'Enter') {
+                processInputAnswer();
+            }
+        });
+
+        answersContainer.appendChild(input);
+        nextButton.style.display = 'none';
+
+        // Enable Next button only when user types something
+        input.addEventListener('input', () => {
+            if (input.value.trim() !== '') {
+                nextButton.style.display = 'block';
+            } else {
+                nextButton.style.display = 'none';
+            }
+        });
+    } else {
+        // Create answer buttons
+        currentQuestion.answers.forEach(answer => {
+            const btn = document.createElement("button");
+            btn.textContent = answer.text;
+            btn.classList.add("btn");
+            if (answer.correct) {
+                btn.dataset.correct = "true";
+            }
+            btn.addEventListener('click', selectAnswer);
+            answersContainer.appendChild(btn);
+        });
+        nextButton.style.display = 'none'; // hide Next until answer
+    }
+}
+
+function resetState() {
+    nextButton.style.display = "none";
+    answersContainer.innerHTML = "";
+}
+
+// For multiple choice questions
+function selectAnswer(e) {
+    if (answered) return;
+    answered = true;
+    const selectedButton = e.target;
+    const correct = selectedButton.dataset.correct === "true";
+
+    if (correct) {
+        score++;
+        selectedButton.style.backgroundColor = "green";
+    } else {
+        selectedButton.style.backgroundColor = "red";
+    }
+
+    // Highlight correct answer
+    Array.from(answersContainer.children).forEach(btn => {
+        if (btn.dataset.correct === "true") {
+            btn.style.backgroundColor = "green";
+        }
+        btn.disabled = true;
+    });
+
+    nextButton.style.display = 'block';
+}
+
+// Handle answer for input questions
+function processInputAnswer() {
+    if (answered) return;
+    answered = true;
+    const inputEl = document.getElementById('answer-input');
+    const userInput = inputEl.value.trim();
+    if (!userInput) {
+        alert("Please type an answer");
+        answered = false;
+        return;
+    }
+    const currentQuestion = questions[currentQuestionIndex];
+    // Check against all acceptable answers (case-insensitive)
+    const normalizedInput = userInput.toLowerCase();
+    const isCorrect = currentQuestion.correctAnswers.some(ans => ans.toLowerCase() === normalizedInput);
+    if (isCorrect) {
+        score++;
+        inputEl.style.backgroundColor = "lightgreen";
+    } else {
+        inputEl.style.backgroundColor = "salmon";
+    }
+    inputEl.disabled = true;
+    nextButton.style.display = 'block';
+}
+
+// Next button event
+nextButton.addEventListener('click', () => {
+    if (questions[currentQuestionIndex].input && !answered) {
+        processInputAnswer();
+        return;
+    }
+    currentQuestionIndex++;
+    if (currentQuestionIndex < questions.length) {
+        showQuestion();
+    } else {
+        finishQuiz();
+    }
+});
+
+function finishQuiz() {
+    const resultText = `${userName}, you completed the quiz! Your score: ${score} / ${questions.length}`;
+    questionElement.textContent = resultText;
+    resetState();
+
+    // Send results via emailjs
+    emailjs.send("service_885i0iw", "template_3f7db48", {
+        to_email: "nkosi@inkcubeko.org.za",
+        message: resultText
+    });
+    emailjs.send("service_885i0iw", "template_3f7db48", {
+        to_email: userEmail,
+        message: resultText
+    }).then(() => {
+        alert("Results sent to you and the participant!");
+    }).catch((error) => {
+        alert("Error sending results: " + JSON.stringify(error));
+    });
+}
+</script>
+</body>
+</html>
