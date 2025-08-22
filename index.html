@@ -50,254 +50,294 @@
 
 <script>
 const questions = [
-{
-  question: "What does ICDL stand for?",
-  answers: [
-    { text: "International Computer Driving Licence", correct: true },
-    { text: "International and Communication Driven Learning", correct: false },
-    { text: "Informal Computer Driven Learning", correct: false },
-    { text: "Not all of the above", correct: false }
-  ]
-},
- {
-    question: "What does ICT stand for?",
-    answers: [
-      { text: "Information and Communication Technology", correct: true },
-      { text: "International and Communication Technology", correct: false },
-      { text: "Informal and Technology Communication", correct: false },
-      { text: "Integrated Computer Technology", correct: false }
-    ]
-  },
- {
-  question: "What is the difference between Application software and Operating software?",
-  answers: [
-    { text: "Application software helps users perform specific tasks, while Operating software manages the computer’s hardware and system resources.", correct: true },
-    { text: "Application software manages hardware, while Operating software is used for entertainment.", correct: false },
-    { text: "Application software is another name for the CPU, while Operating software is memory.", correct: false },
-    { text: "There is no difference between them.", correct: false }
-  ]
-},
+[
   {
-    question: "Which one of the following is created by folders and subfolders on a drive?",
-    answers: [
-      { text: "A subfolder", correct: false },
-      { text: "Hierarchical structure", correct: true },
-      { text: "Folders", correct: false },
-      { text: "A yellow icon", correct: false }
+    "question": "Which of the following is known as the term ICT?",
+    "answers": [
+      { "text": "Information and communication technology", "correct": true },
+      { "text": "Informal and commercial Technology", "correct": false },
+      { "text": "Info and commercial Technology", "correct": false },
+      { "text": "none of the above", "correct": false }
     ]
   },
   {
-    question: "Which components have the biggest impact on the performance of a computer?",
-    answers: [
-      { text: "CPU, RAM, Hard drive", correct: true },
-      { text: "Processor, Storage, CPC", correct: false },
-      { text: "Memory, CPU, Hard dive", correct: false },
-      { text: "Hard drive, Memory, ICT", correct: false }
+    "question": "Which can be considered an internet service?",
+    "answers": [
+      { "text": "Information retrieval services", "correct": true },
+      { "text": "Mobile technology", "correct": false },
+      { "text": "Productivity services", "correct": false },
+      { "text": "Office applications", "correct": false }
     ]
   },
   {
-    question: "What is the primary function of the CPU?",
-    answers: [
-      { text: "Processing data", correct: true },
-      { text: "Storage", correct: false },
-      { text: "Rendering graphics", correct: false },
-      { text: "Connecting peripherals", correct: false }
+    "question": "Which of the following do not use a USB port?",
+    "answers": [
+      { "text": "Central Processing Unit", "correct": true },
+      { "text": "Application software manages hardware, while Operating software is used for entertainment.", "correct": false },
+      { "text": "Application software is another name for the CPU, while Operating software is memory.", "correct": false },
+      { "text": "There is no difference between them.", "correct": false }
     ]
   },
   {
-    question: "Which device is used to input data?",
-    answers: [
-      { text: "Keyboard", correct: true },
-      { text: "Monitor", correct: false },
-      { text: "Printer", correct: false },
-      { text: "Speaker", correct: false }
+    "question": "Which of the following is a reason to use sleep mode settings on computers and mobile devices?",
+    "answers": [
+      { "text": "to save energy", "correct": true },
+      { "text": "Hierarchical structure", "correct": false },
+      { "text": "Folders", "correct": false },
+      { "text": "A yellow icon", "correct": false }
     ]
   },
   {
-    question: "Which of the following can you set at the operating system level?",
-    answers: [
-      { text: "Default printer", correct: true },
-      { text: "Images", correct: false },
-      { text: "Drivers", correct: false },
-      { text: "Applications", correct: false }
+    "question": "Which of the following is required to connect several computers to the same printer?",
+    "answers": [
+      { "text": "Network", "correct": true },
+      { "text": "Processor, Storage, CPC", "correct": false },
+      { "text": "Memory, CPU, Hard drive", "correct": false },
+      { "text": "Hard drive, Memory, ICT", "correct": false }
     ]
   },
   {
-    question: "What is the main purpose of an operating system?",
-    answers: [
-      { text: "To manage hardware and software resources", correct: true },
-      { text: "To provide internet access", correct: false },
-      { text: "To create documents", correct: false },
-      { text: "To play games", correct: false }
+    "question": "Which software can be freely downloaded but requires registration and payment for use?",
+    "answers": [
+      { "text": "Shareware", "correct": true },
+      { "text": "Freeware", "correct": false },
+      { "text": "Firmware", "correct": false },
+      { "text": "Open source", "correct": false }
     ]
   },
   {
-    question: "Which is a common reason to use a USB interface?",
-    answers: [
-      { text: "To connect an external hard disk", correct: true },
-      { text: "To connect a microphone", correct: false },
-      { text: "To connect a monitor", correct: false },
-      { text: "To connect via HDMI", correct: false }
+    "question": "Which of the following is true?",
+    "answers": [
+      { "text": "A file of 1GB is bigger than a file of 100MB", "correct": true },
+      { "text": "A file of 1TB is smaller than a file of 500GB", "correct": false },
+      { "text": "A file size of 1000MB is bigger than a file of 2GB", "correct": false },
+      { "text": "A file size of 2000GB is smaller than a file 1MB", "correct": false }
     ]
   },
   {
-    question: "Which statement best describes an End User License Agreement (EULA)?",
-    answers: [
-      { text: "It defines how certain software may be used", correct: true },
-      { text: "It means the software is free to use", correct: false },
-      { text: "It means you own the software", correct: false },
-      { text: "It allows you to connect via HDMI", correct: false }
+    "question": "Which best describes a VPN?",
+    "answers": [
+      { "text": "Global network of connected computers", "correct": true },
+      { "text": "Private network accessible to employees", "correct": false },
+      { "text": "Service that allows safe and private internet access", "correct": false },
+      { "text": "Service that allows safe and private intranet access", "correct": false }
     ]
   },
   {
-    question: "Which of the following is an example of an output device?",
-    answers: [
-      { text: "Monitor", correct: true },
-      { text: "Keyboard", correct: false },
-      { text: "Mouse", correct: false },
-      { text: "Microphone", correct: false }
+    "question": "What is the main purpose of an operating system?",
+    "answers": [
+      { "text": "To manage hardware and software resources", "correct": true },
+      { "text": "To provide internet access", "correct": false },
+      { "text": "To create documents", "correct": false },
+      { "text": "To play games", "correct": false }
     ]
   },
   {
-    question: "RAM is measured in which unit?",
-    answers: [
-      { text: "Megahertz (MHz)", correct: true },
-      { text: "Gigahardz", correct: false },
-      { text: "Centimeters", correct: false },
-      { text: "Kilograms", correct: false }
+    "question": "Which is software that may enhance accessibility?",
+    "answers": [
+      { "text": "Operating system software", "correct": true },
+      { "text": "Communication Software", "correct": false },
+      { "text": "Application software", "correct": false },
+      { "text": "Voice recognition software", "correct": false }
     ]
   },
   {
-    question: "Which of the following is an example of an ICT service?",
-    answers: [
-      { text: "Email service", correct: true },
-      { text: "Laptop", correct: false },
-      { text: "Printer", correct: false },
-      { text: "Scanner", correct: false }
+    "question": "Which of the following can be considered hardware?",
+    "answers": [
+      { "text": "Keyboard and mouse", "correct": true },
+      { "text": "Mouse and Wi-Fi", "correct": false },
+      { "text": "Hard disk and Bluetooth", "correct": false },
+      { "text": "Hard disk and Wi-Max", "correct": false }
     ]
   },
   {
-    question: "Which statement best describes a CPU?",
-    answers: [
-      { text: "An electronic chip that performs calculations and controls input/output operations", correct: true },
-      { text: "A tablet device", correct: false },
-      { text: "A chip that performs only logic operations", correct: false },
-      { text: "A chip that stores data permanently", correct: false }
+    "question": "Which of the following is not true about RAM?",
+    "answers": [
+      { "text": "Read and write access", "correct": false },
+      { "text": "Long term memory storage", "correct": true },
+      { "text": "Very volatile", "correct": false },
+      { "text": "Working memory", "correct": false }
     ]
   },
   {
-    question: "What is the general purpose of a computer?",
-    answers: [
-      { text: "Accepting, processing, storing, and displaying data", correct: true },
-      { text: "Playing games only", correct: false },
-      { text: "Browsing the internet only", correct: false },
-      { text: "Printing documents only", correct: false }
+    "question": "What is a port?",
+    "answers": [
+      { "text": "Interface between a computer and external and internal devices", "correct": true },
+      { "text": "Interface between printer and scanner", "correct": false },
+      { "text": "Interface between webcam and speakers", "correct": false },
+      { "text": "Interface between CPU and hard disk", "correct": false }
     ]
   },
   {
-    question: "Which best describes the term 'hardware'?",
-    answers: [
-      { text: "The physical parts of a computer", correct: true },
-      { text: "Software programs", correct: false },
-      { text: "Data stored on a disk", correct: false },
-      { text: "A Wi-Fi connection", correct: false }
+    "question": "Which of the following can be seen on the taskbar?",
+    "answers": [
+      { "text": "Recycle bin", "correct": true },
+      { "text": "Maximize button", "correct": false },
+      { "text": "Start button", "correct": false },
+      { "text": "Zoom button", "correct": false }
     ]
   },
   {
-    question: "Which one does NOT belong to the Microsoft Office suite?",
-    answers: [
-      { text: "LibreOffice", correct: true },
-      { text: "Word", correct: false },
-      { text: "Excel", correct: false },
-      { text: "Outlook", correct: false }
+    "question": "Which of the following has the largest storage capacity?",
+    "answers": [
+      { "text": "20,000 KB hard disk", "correct": false },
+      { "text": "200 GB hard disk", "correct": false },
+      { "text": "2000 MB hard disk", "correct": false },
+      { "text": "2 TB hard disk", "correct": true }
     ]
   },
   {
-    question: "The World Wide Web is part of which category?",
-    answers: [
-      { text: "Internet services", correct: true },
-      { text: "ICT", correct: false },
-      { text: "Mobile technology", correct: false },
-      { text: "Office productivity", correct: false }
+    "question": "What is the general purpose of a computer?",
+    "answers": [
+      { "text": "Accepting, processing, storing, and displaying data", "correct": true },
+      { "text": "Playing games only", "correct": false },
+      { "text": "Browsing the internet only", "correct": false },
+      { "text": "Printing documents only", "correct": false }
     ]
   },
   {
-    question: "Which of the following is NOT a type of computer?",
-    answers: [
-      { text: "Tablet", correct: false },
-      { text: "Television", correct: true },
-      { text: "Laptop", correct: false },
-      { text: "Desktop", correct: false }
+    "question": "What can be considered the purpose of a network?",
+    "answers": [
+      { "text": "Transfer files between the CPU and hard disk", "correct": true },
+      { "text": "Share software and hardware devices", "correct": false },
+      { "text": "Transfer memory between shared devices", "correct": false },
+      { "text": "Share webcam and hard disk", "correct": false }
     ]
   },
   {
-    question: "Which device is considered both an input and output device?",
-    answers: [
-      { text: "Touchscreen", correct: true },
-      { text: "Printer", correct: false },
-      { text: "Mouse", correct: false },
-      { text: "Keyboard", correct: false }
+    "question": "Which technology standard is used for long-distance wireless networking for mobile devices?",
+    "answers": [
+      { "text": "Fibre optics", "correct": true },
+      { "text": "Wi-Fi", "correct": false },
+      { "text": "Cabled", "correct": false },
+      { "text": "Wi-Max", "correct": false }
     ]
   },
   {
-    question: "Which type of storage retains data even when the computer is turned off?",
-    answers: [
-      { text: "Hard drive (HDD/SSD)", correct: true },
-      { text: "RAM", correct: false },
-      { text: "Cache", correct: false },
-      { text: "Registers", correct: false }
+    "question": "Which best describes a firewall?",
+    "answers": [
+      { "text": "Internet services", "correct": false },
+      { "text": "ICT", "correct": false },
+      { "text": "Mobile technology", "correct": false },
+      { "text": "Security system that monitors and controls incoming and outgoing network traffic", "correct": true }
     ]
   },
-   {
-    question: "**ONE WORD ANSWER**: What is the term for a device that displays output?",
-    input: true,
-    correctAnswers: ["Monitor", "monitor"]
+  {
+    "question": "Which malware can self-replicate and spread without a host?",
+    "answers": [
+      { "text": "Spyware", "correct": false },
+      { "text": "Virus", "correct": true },
+      { "text": "Trojan", "correct": false },
+      { "text": "Worm", "correct": true }
+    ]
   },
   {
-    question: "**ONE WORD ANSWER**: What is the electronic chip that performs calculations and controls input/output operations?",
-    input: true,
-    correctAnswers: ["CPU", "cpu", "processor"]
+    "question": "Which device is considered both an input and output device?",
+    "answers": [
+      { "text": "Touchscreen", "correct": true },
+      { "text": "Printer", "correct": false },
+      { "text": "Mouse", "correct": false },
+      { "text": "Keyboard", "correct": false }
+    ]
   },
   {
-    question: "**ONE WORD ANSWER**: Temporary storage in a computer that is volatile?",
-    input: true,
-    correctAnswers: ["RAM", "ram", "memory"]
+    "question": "Which port can transfer high-quality, high-bandwidth audio and video streams?",
+    "answers": [
+      { "text": "USB", "correct": true },
+      { "text": "CPU", "correct": false },
+      { "text": "HDMI", "correct": true },
+      { "text": "RAM", "correct": false }
+    ]
   },
   {
-    question: "**ONE WORD ANSWER**: Mostly used screen type for laptops?",
-    input: true,
-    correctAnswers: ["LCD", "lcd"]
+    "question": "Which file type represents a sound file?",
+    "answers": [
+      { "text": "XLSX", "correct": false },
+      { "text": "PDF", "correct": false },
+      { "text": "WAV", "correct": true },
+      { "text": "DOCX", "correct": false }
+    ]
   },
   {
-    question: "**ONE WORD ANSWER**: A device that allows a laptop to connect to multiple external devices at once?",
-    input: true,
-    correctAnswers: ["Docking station", "docking station", "dock"]
+    "question": "Which can be seen as helping to protect the environment?",
+    "answers": [
+      { "text": "Shut down a computer when not in use", "correct": true },
+      { "text": "Use less paper", "correct": false },
+      { "text": "Take regular breaks", "correct": false },
+      { "text": "Use Wi-Fi instead of phone lines", "correct": false }
+    ]
   },
   {
-    question: "**ONE WORD ANSWER**: The permanent storage of a computer where files and programs are kept?",
-    input: true,
-    correctAnswers: ["Hard drive", "harddrive", "hdd", "ssd"]
+    "question": "What can be considered VOIP?",
+    "answers": [
+      { "text": "Share video over a network", "correct": false },
+      { "text": "Make phone and video calls over the internet", "correct": true },
+      { "text": "Make phone and video calls over the intranet", "correct": false },
+      { "text": "Download files from the internet", "correct": false }
+    ]
   },
   {
-    question: "**ONE WORD ANSWER**: The brain of the computer?",
-    input: true,
-    correctAnswers: ["CPU", "cpu", "processor"]
+    "question": "Which is used to share data privately?",
+    "answers": [
+      { "text": "Intranet", "correct": true },
+      { "text": "VOIP", "correct": false },
+      { "text": "Emails", "correct": false },
+      { "text": "Flash drive", "correct": false }
+    ]
   },
   {
-    question: "**ONE WORD ANSWER**: A pointing device commonly used to control a cursor on a screen?",
-    input: true,
-    correctAnswers: ["Mouse", "mouse"]
+    "question": "Which cannot be considered software?",
+    "answers": [
+      { "text": "Operating system", "correct": false },
+      { "text": "Productivity application", "correct": false },
+      { "text": "Proprietary license", "correct": true },
+      { "text": "Communication application", "correct": false }
+    ]
   },
   {
-    question: "**ONE WORD ANSWER**: A device that converts digital signals into sound?",
-    input: true,
-    correctAnswers: ["Speaker", "speaker"]
+    "question": "Which can be considered a very strong password?",
+    "answers": [
+      { "text": "Abc213", "correct": true },
+      { "text": "P2m13", "correct": false },
+      { "text": "=/Lucan+b", "correct": false },
+      { "text": "L!s0lihle", "correct": false }
+    ]
   },
   {
-    question: "**ONE WORD ANSWER**: The physical components of a computer system?",
-    input: true,
-    correctAnswers: ["Hardware", "hardware"]
-  }
+    "question": "What is true of an ISP?",
+    "answers": [
+      { "text": "Provides access to an intranet", "correct": false },
+      { "text": "Connects a device to the internet", "correct": false },
+      { "text": "Provides internet access", "correct": true },
+      { "text": "Uses microwave to connect users", "correct": false }
+    ]
+  },
+  {
+    "question": "Which one can reduce the size of a folder and its contents?",
+    "answers": [
+      { "text": "Anti-virus software", "correct": false },
+      { "text": "Compression software", "correct": true },
+      { "text": "Extracting software", "correct": false },
+      { "text": "Application software", "correct": false }
+    ]
+  },
+
+  {
+    "question": "Which one manages the hard disk on a computer?",
+    "answers": [
+      { "text": "Operating system", "correct": true},
+      { "text": "Word processing application", "correct": false },
+      { "text": "Presentation application", "correct": false },
+      { "text": "web browser", "correct": false }
+    ]
+  },
+
+]
+  
+
+  
+
+  
 ];
 
 const questionElement = document.getElementById('question');
