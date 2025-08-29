@@ -49,97 +49,7 @@
 </div>
 
 <script>
-const questions = [
-  {
-    "question": "Which of the following is known as the term ICT?",
-    "answers": [
-      { "text": "Information and communication technology", "correct": true },
-      { "text": "Informal and commercial Technology", "correct": false },
-      { "text": "Info and commercial Technology", "correct": false },
-      { "text": "none of the above", "correct": false }
-    ]
-  },
-  {
-    "question": "Which can be considered an internet service?",
-    "answers": [
-      { "text": "Information retrieval services", "correct": true },
-      { "text": "Mobile technology", "correct": false },
-      { "text": "Productivity services", "correct": false },
-      { "text": "Office applications", "correct": false }
-    ]
-  },
-  {
-    "question": "Which of the following do not use a USB port?",
-    "answers": [
-      { "text": "Central Processing Unit", "correct": true },
-      { "text": "Application software manages hardware, while Operating software is used for entertainment.", "correct": false },
-      { "text": "Application software is another name for the CPU, while Operating software is memory.", "correct": false },
-      { "text": "There is no difference between them.", "correct": false }
-    ]
-  },
-  {
-    "question": "Which of the following is a reason to use sleep mode settings on computers and mobile devices?",
-    "answers": [
-      { "text": "to save energy", "correct": true },
-      { "text": "Hierarchical structure", "correct": false },
-      { "text": "Folders", "correct": false },
-      { "text": "A yellow icon", "correct": false }
-    ]
-  },
-  {
-    "question": "Which of the following is required to connect several computers to the same printer?",
-    "answers": [
-      { "text": "Network", "correct": true },
-      { "text": "Processor, Storage, CPC", "correct": false },
-      { "text": "Memory, CPU, Hard drive", "correct": false },
-      { "text": "Hard drive, Memory, ICT", "correct": false }
-    ]
-  },
-  {
-    "question": "Which software can be freely downloaded but requires registration and payment for use?",
-    "answers": [
-      { "text": "Shareware", "correct": true },
-      { "text": "Freeware", "correct": false },
-      { "text": "Firmware", "correct": false },
-      { "text": "Open source", "correct": false }
-    ]
-  },
-  {
-    "question": "Which of the following is true?",
-    "answers": [
-      { "text": "A file of 1GB is bigger than a file of 100MB", "correct": true },
-      { "text": "A file of 1TB is smaller than a file of 500GB", "correct": false },
-      { "text": "A file size of 1000MB is bigger than a file of 2GB", "correct": false },
-      { "text": "A file size of 2000GB is smaller than a file 1MB", "correct": false }
-    ]
-  },
-  {
-    "question": "Which best describes a VPN?",
-    "answers": [
-      { "text": "Global network of connected computers", "correct": true },
-      { "text": "Private network accessible to employees", "correct": false },
-      { "text": "Service that allows safe and private internet access", "correct": false },
-      { "text": "Service that allows safe and private intranet access", "correct": false }
-    ]
-  },
-  {
-    "question": "What is the main purpose of an operating system?",
-    "answers": [
-      { "text": "To manage hardware and software resources", "correct": true },
-      { "text": "To provide internet access", "correct": false },
-      { "text": "To create documents", "correct": false },
-      { "text": "To play games", "correct": false }
-    ]
-  },
-  {
-    "question": "Which is software that may enhance accessibility?",
-    "answers": [
-      { "text": "Operating system software", "correct": true },
-      { "text": "Communication Software", "correct": false },
-      { "text": "Application software", "correct": false },
-      { "text": "Voice recognition software", "correct": false }
-    ]
-  },
+const questions =[
   {
     "question": "Which of the following can be considered hardware?",
     "answers": [
@@ -147,105 +57,6 @@ const questions = [
       { "text": "Mouse and Wi-Fi", "correct": false },
       { "text": "Hard disk and Bluetooth", "correct": false },
       { "text": "Hard disk and Wi-Max", "correct": false }
-    ]
-  },
-  {
-    "question": "Which of the following is not true about RAM?",
-    "answers": [
-      { "text": "Read and write access", "correct": false },
-      { "text": "Long term memory storage", "correct": true },
-      { "text": "Very volatile", "correct": false },
-      { "text": "Working memory", "correct": false }
-    ]
-  },
-  {
-    "question": "What is a port?",
-    "answers": [
-      { "text": "Interface between a computer and external and internal devices", "correct": true },
-      { "text": "Interface between printer and scanner", "correct": false },
-      { "text": "Interface between webcam and speakers", "correct": false },
-      { "text": "Interface between CPU and hard disk", "correct": false }
-    ]
-  },
-  {
-    "question": "Which of the following can be seen on the taskbar?",
-    "answers": [
-      { "text": "Recycle bin", "correct": true },
-      { "text": "Maximize button", "correct": false },
-      { "text": "Start button", "correct": false },
-      { "text": "Zoom button", "correct": false }
-    ]
-  },
-  {
-    "question": "Which of the following has the largest storage capacity?",
-    "answers": [
-      { "text": "20,000 KB hard disk", "correct": false },
-      { "text": "200 GB hard disk", "correct": false },
-      { "text": "2000 MB hard disk", "correct": false },
-      { "text": "2 TB hard disk", "correct": true }
-    ]
-  },
-  {
-    "question": "What is the general purpose of a computer?",
-    "answers": [
-      { "text": "Accepting, processing, storing, and displaying data", "correct": true },
-      { "text": "Playing games only", "correct": false },
-      { "text": "Browsing the internet only", "correct": false },
-      { "text": "Printing documents only", "correct": false }
-    ]
-  },
-  {
-    "question": "What can be considered the purpose of a network?",
-    "answers": [
-      { "text": "Transfer files between the CPU and hard disk", "correct": true },
-      { "text": "Share software and hardware devices", "correct": false },
-      { "text": "Transfer memory between shared devices", "correct": false },
-      { "text": "share webcam and hard disk", "correct": false }
-    ]
-  },
-  {
-    "question": "Which technology standard is used for long-distance wireless networking for mobile devices?",
-    "answers": [
-      { "text": "Fibre optics", "correct": true },
-      { "text": "WI_FI", "correct": false },
-      { "text": "Cabled", "correct": false },
-      { "text": "WI - Max", "correct": false }
-    ]
-  },
-  {
-    "question": "which best describe a firewall?",
-    "answers": [
-      { "text": "Internet services", "correct": false },
-      { "text": "ICT", "correct": false },
-      { "text": "Mobile technology", "correct": false },
-      { "text": "Service that monitors and controls network traffic", "correct": true }
-    ]
-  },
-  {
-    "question": "Which malware can self-replicate and spread without a host?",
-    "answers": [
-      { "text": "Spyware", "correct": false },
-      { "text": "Virus", "correct": true },
-      { "text": "Trojan", "correct": false },
-      { "text": "Worm", "correct": true }
-    ]
-  },
-  {
-    "question": "Which device is considered both an input and output device?",
-    "answers": [
-      { "text": "Touchscreen", "correct": true },
-      { "text": "Printer", "correct": false },
-      { "text": "Mouse", "correct": false },
-      { "text": "Keyboard", "correct": false }
-    ]
-  },
-  {
-    "question": "Which port can transfer high-quality, high-bandwidth audio and video streams?",
-    "answers": [
-      { "text": "USB", "correct": true },
-      { "text": "CPU", "correct": false },
-      { "text": "HDMI", "correct": true },
-      { "text": "RAM", "correct": false }
     ]
   },
   {
@@ -258,111 +69,12 @@ const questions = [
     ]
   },
   {
-    "question": "Which can be seen as helping to protect the environment?",
+    "question": "Which of the following is not true about RAM?",
     "answers": [
-      { "text": "Shut down a computer when not in use", "correct": true },
-      { "text": "Use less paper", "correct": false },
-      { "text": "Take regular breaks", "correct": false },
-      { "text": "Use Wi-Fi instead of phone lines", "correct": false }
-    ]
-  },
-  {
-    "question": "What can be considered VOIP?",
-    "answers": [
-      { "text": "Share video over a network", "correct": false },
-      { "text": "Make phone and video calls over the internet", "correct": true },
-      { "text": "Make phone and video calls over the intranet", "correct": false },
-      { "text": "Download files from the internet", "correct": false }
-    ]
-  },
-  {
-    "question": "Which is used to share data privately?",
-    "answers": [
-      { "text": "Intranet", "correct": true },
-      { "text": "VOIP", "correct": false },
-      { "text": "Emails", "correct": false },
-      { "text": "Flash drive", "correct": false }
-    ]
-  },
-  {
-    "question": "Which cannot be considered software?",
-    "answers": [
-      { "text": "Operating system", "correct": false },
-      { "text": "Productivity application", "correct": false },
-      { "text": "Proprietary license", "correct": true },
-      { "text": "Communication application", "correct": false }
-    ]
-  },
-  {
-    "question": "Which can be considered a very strong password?",
-    "answers": [
-      { "text": "Abc213", "correct": true },
-      { "text": "P2m13", "correct": false },
-      { "text": "=/Lucan+b", "correct": false },
-      { "text": "L!s0lihle", "correct": false }
-    ]
-  },
-  {
-    "question": "What is true of an ISP?",
-    "answers": [
-      { "text": "Provides access to an intranet", "correct": false },
-      { "text": "Connects a device to the internet", "correct": false },
-      { "text": "Provides internet access", "correct": true },
-      { "text": "Uses microwave to connect users", "correct": false }
-    ]
-  },
-  {
-    "question": "Which one can reduce the size of a folder and its contents?",
-    "answers": [
-      { "text": "Anti-virus software", "correct": false },
-      { "text": "Compression software", "correct": true },
-      { "text": "Extracting software", "correct": false },
-      { "text": "Application software", "correct": false }
-    ]
-  },
-  {
-    "question": "Which one manages the hard disk on a computer?",
-    "answers": [
-      { "text": "Operating system", "correct": true },
-      { "text": "Word processing application", "correct": false },
-      { "text": "Presentation application", "correct": false },
-      { "text": "web browser", "correct": false }
-    ]
-  },
-  {
-    "question": "Which device is primarily used for data storage?",
-    "answers": [
-      { "text": "Hard disk drive", "correct": true },
-      { "text": "Monitor", "correct": false },
-      { "text": "Keyboard", "correct": false },
-      { "text": "Printer", "correct": false }
-    ]
-  },
-  {
-    "question": "Which of the following is a type of a volatile memory?",
-    "answers": [
-      { "text": "ROM (Read-Only Memory)", "correct": false },
-      { "text": "RAM", "correct": true },
-      { "text": "Cache", "correct": false },
-      { "text": "Virtual memory", "correct": false }
-    ]
-  },
-  {
-    "question": "Which of the following is an example of cloud storage?",
-    "answers": [
-      { "text": "Google Drive", "correct": true },
-      { "text": "External hard drive", "correct": false },
-      { "text": "USB flash drive", "correct": false },
-      { "text": "CD-ROM", "correct": false }
-    ]
-  },
-  {
-    "question": "Which operating system is primarily used in smartphones?",
-    "answers": [
-      { "text": "Android", "correct": true },
-      { "text": "Windows", "correct": false },
-      { "text": "macOS", "correct": false },
-      { "text": "Linux", "correct": false }
+      { "text": "Read and write access", "correct": false },
+      { "text": "Long term memory storage", "correct": true },
+      { "text": "Very volatile", "correct": false },
+      { "text": "Working memory", "correct": false }
     ]
   },
   {
@@ -375,24 +87,142 @@ const questions = [
     ]
   },
   {
-    "question": "Which file extension is typically used for a Microsoft Word document?",
+    "question": "Which one manages the hard disk on a computer?",
     "answers": [
-      { "text": ".docx", "correct": true },
-      { "text": ".xlsx", "correct": false },
-      { "text": ".pptx", "correct": false },
-      { "text": ".pdf", "correct": false }
+      { "text": "Operating system", "correct": true },
+      { "text": "Word processing application", "correct": false },
+      { "text": "Presentation application", "correct": false },
+      { "text": "Web browser", "correct": false }
     ]
   },
   {
-    "question": "What is the main purpose of a network?",
+    "question": "Which is used to share data privately?",
     "answers": [
-      { "text": "To connect computers and share resources", "correct": true },
-      { "text": "To increase storage capacity", "correct": false },
-      { "text": "To improve graphics quality", "correct": false },
-      { "text": "To prevent internet access", "correct": false }
+      { "text": "Intranet", "correct": true },
+      { "text": "VOIP", "correct": false },
+      { "text": "Emails", "correct": false },
+      { "text": "Flash drive", "correct": false }
+    ]
+  },
+  {
+    "question": "Which of the following has the largest storage capacity?",
+    "answers": [
+      { "text": "20,000 KB hard disk", "correct": false },
+      { "text": "200 GB hard disk", "correct": false },
+      { "text": "2000 MB hard disk", "correct": false },
+      { "text": "2 TB hard disk", "correct": true }
+    ]
+  },
+  {
+    "question": "Which cannot be considered software?",
+    "answers": [
+      { "text": "Operating system", "correct": false },
+      { "text": "Productivity application", "correct": false },
+      { "text": "Proprietary license", "correct": true },
+      { "text": "Communication application", "correct": false }
+    ]
+  },
+  {
+    "question": "Which device is considered both an input and output device?",
+    "answers": [
+      { "text": "Touchscreen", "correct": true },
+      { "text": "Printer", "correct": false },
+      { "text": "Mouse", "correct": false },
+      { "text": "Keyboard", "correct": false }
+    ]
+  },
+  {
+    "question": "What can be considered VOIP?",
+    "answers": [
+      { "text": "Share video over a network", "correct": false },
+      { "text": "Make phone and video calls over the internet", "correct": true },
+      { "text": "Make phone and video calls over the intranet", "correct": false },
+      { "text": "Download files from the internet", "correct": false }
+    ]
+  },
+  {
+    "question": "Which one can reduce the size of a folder and its contents?",
+    "answers": [
+      { "text": "Anti-virus software", "correct": false },
+      { "text": "Compression software", "correct": true },
+      { "text": "Extracting software", "correct": false },
+      { "text": "Application software", "correct": false }
+    ]
+  },
+  {
+    "question": "Which malware can self-replicate and spread without a host?",
+    "answers": [
+      { "text": "Spyware", "correct": false },
+      { "text": "Virus", "correct": false },
+      { "text": "Trojan", "correct": false },
+      { "text": "Worm", "correct": true }
+    ]
+  },
+  {
+    "question": "What is the general purpose of a computer?",
+    "answers": [
+      { "text": "Accepting, processing, storing, and displaying data", "correct": true },
+      { "text": "Playing games only", "correct": false },
+      { "text": "Browsing the internet only", "correct": false },
+      { "text": "Printing documents only", "correct": false }
+    ]
+  },
+  {
+    "question": "Which best describes a VPN?",
+    "answers": [
+      { "text": "Service that allows safe and private internet access", "correct": true },
+      { "text": "Global network of connected computers", "correct": false },
+      { "text": "Private network accessible to employees", "correct": false },
+      { "text": "Service that allows safe and private intranet access", "correct": false }
+    ]
+  },
+  {
+    "question": "Which software can be freely downloaded but requires registration and payment for use?",
+    "answers": [
+      { "text": "Shareware", "correct": true },
+      { "text": "Freeware", "correct": false },
+      { "text": "Firmware", "correct": false },
+      { "text": "Open source", "correct": false }
+    ]
+  },
+  {
+    "question": "Which port can transfer high-quality, high-bandwidth audio and video streams?",
+    "answers": [
+      { "text": "HDMI", "correct": true },
+      { "text": "USB", "correct": false },
+      { "text": "CPU", "correct": false },
+      { "text": "RAM", "correct": false }
+    ]
+  },
+  {
+    "question": "Which is software that may enhance accessibility?",
+    "answers": [
+      { "text": "Voice recognition software", "correct": true },
+      { "text": "Communication Software", "correct": false },
+      { "text": "Application software", "correct": false },
+      { "text": "Operating system software", "correct": false }
+    ]
+  },
+  {
+    "question": "Which technology standard is used for long-distance wireless networking for mobile devices?",
+    "answers": [
+      { "text": "Wi-Max", "correct": true },
+      { "text": "Fibre optics", "correct": false },
+      { "text": "Wi-Fi", "correct": false },
+      { "text": "Cabled", "correct": false }
+    ]
+  },
+  {
+    "question": "What is the main purpose of an operating system?",
+    "answers": [
+      { "text": "To manage hardware and software resources", "correct": true },
+      { "text": "To provide internet access", "correct": false },
+      { "text": "To create documents", "correct": false },
+      { "text": "To play games", "correct": false }
     ]
   }
 ]
+
 
 const questionElement = document.getElementById('question');
 const answersContainer = document.getElementById('answers-buttons');
