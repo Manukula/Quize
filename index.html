@@ -101,25 +101,25 @@ const questions =
     "question": "Which task can be set at the operating system level?",
     "answers": [
       { "text": "Webcam", "correct": false },
-      { "text": "Printer", "correct": false },
-      { "text": "Microphone", "correct": true },
+      { "text": "Printer", "correct": true },
+      { "text": "Microphone", "correct": false },
       { "text": "Speakers", "correct": false }
     ]
   },
     {
     "question": "Which one of the following things can and ought to be recycled?",
     "answers": [
-      { "text": "Computer", "correct": false },
+      { "text": "Computer", "correct": true },
       { "text": "Printer", "correct": false },
-      { "text": "Microphone", "correct": true },
+      { "text": "Microphone", "correct": false },
       { "text": "Speakers", "correct": false }
     ]
   },
   {
     "question": "What task can you perform in the print job queue window?",
     "answers": [
-      { "text": "Pause or cancel a print job", "correct": false },
-      { "text": "Add more print jobs", "correct": true },
+      { "text": "Pause or cancel a print job", "correct": true},
+      { "text": "Add more print jobs", "correct": false },
       { "text": "Print more copies", "correct": false },
       { "text": "Configure firmware", "correct": false }
     ]
@@ -127,8 +127,8 @@ const questions =
   {
     "question": "Which of the following is considered an input/output port?",
     "answers": [
-      { "text": "Hard disk", "correct": false },
-      { "text": "Webcam", "correct": true },
+      { "text": "Hard disk", "correct": true },
+      { "text": "Webcam", "correct": false },
       { "text": "Printer-scanner", "correct": false },
       { "text": "Table division", "correct": false }
     ]
@@ -187,15 +187,15 @@ const questions =
       { "text": "To change font size", "correct": false }
     ]
   },
-  {
-    "question": "What helps recover data lost due to hardware damage, fire, or floods?",
-    "answers": [
-      { "text": "Defining a column", "correct": false },
-      { "text": "Creating an unordered list", "correct": false },
-      { "text": "Creating an ordered (numbered) list", "correct": true },
-      { "text": "Inserting a line break", "correct": false }
-    ]
-  },
+ {
+  "question": "What helps recover data lost due to hardware damage, fire, or floods?",
+  "answers": [
+    { "text": "Regular data backups", "correct": true },
+    { "text": "Using a larger hard drive", "correct": false },
+    { "text": "Installing more RAM", "correct": false },
+    { "text": "Defragmenting the disk", "correct": false }
+  ]
+},
   {
     "question": "What can lead to PC infection by a computer virus?",
     "answers": [
@@ -416,3 +416,4 @@ function finishQuiz() {
 </script>
 </body>
 </html>
+
